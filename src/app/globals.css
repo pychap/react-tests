@@ -40,3 +40,20 @@ a {
     color-scheme: dark;
   }
 }
+.form__todo input, .form__todo li label {
+  align-self: stretch;
+  font-size: 1.125rem;
+  padding: 8px;
+}
+
+.form__todo input {
+  margin: 8px;
+  background: white;
+  border-color: #888;
+}
+
+.form__todo label {
+  color: black;
+}
+
+
