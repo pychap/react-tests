@@ -36,6 +36,15 @@
   height: 120vh;
   align-items: center;
   justify-content: center;
+
+}
+.main__todo {
+  background: white;
+  padding: 0px 2px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px hsl(240deg 30% 30% / 0.1),
+    0px 2px 4px hsl(240deg 30% 30% / 0.1),
+    0px 4px 8px hsl(240deg 30% 30% / 0.1);
 }
 
 .main ol {
@@ -58,6 +67,40 @@
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
+}
+
+.form__todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid hsl(240deg 30% 90%);
+}
+.ol {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  color: black;
+}
+
+.todo__lis {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  color: black;
+}
+.todo__lis:not(:last-of-type) {
+  border-bottom: 1px solid hsl(240deg 30% 90%);
+}
+
+.li__input {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 }
 
 .ctas {
