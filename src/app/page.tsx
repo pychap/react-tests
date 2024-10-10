@@ -3,14 +3,64 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import React from "react";
 // import ScrollPosition from "./components/ScrollPosition";
+function reducer(state, action) {
+  switch (action.type) {
+    case "ADD_TODO": {
+      return [
+        ...state,
+        {
+          label: action.label,
+          id: crypto.randomUUID(),
+          completed: false,
+        },
+      ];
+    }
+
+    case "TOGGLE_TODO": {
+      return state.map((todo) => {
+        if (todo.id === action.id) {
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
+        }
+
+        return todo;
+      });
+    }
+  }
+}
 
 export default function Home() {
+  const [tentativeTodo, setTentativeTodo] = React.useState("");
+  const [state, dispatch] = React.useReducer(reducer, []);
+
+  function handleSubmitForm(event) {
+    event.preventDefault();
+
+    dispatch({
+      type: "ADD_TODO",
+      label: tentativeTodo,
+    });
+
+    setTentativeTodo("");
+  }
+  
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         {/* <ScrollPosition /> */}
         <div className={styles.main__todo}>
-          <form className="form__todo" style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "16px" }}>
+          <form
+            className="form__todo"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "16px",
+            }}
+          >
             <label htmlFor="todo-input">What needs to be done?</label>
             <input id="todo-input" />
           </form>
