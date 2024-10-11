@@ -51,7 +51,8 @@ export default function Home() {
       <main className={styles.main}>
         {/* <ScrollPosition /> */}
         <div className={styles.main__todo}>
-          <form
+          <form 
+            onSubmit={handleSubmitForm}
             className="form__todo"
             style={{
               display: "flex",
@@ -62,21 +63,31 @@ export default function Home() {
             }}
           >
             <label htmlFor="todo-input">What needs to be done?</label>
-            <input id="todo-input" />
+            <input 
+              id="todo-input"
+              value={tentativeTodo}
+              onChange={(event) => {
+                setTentativeTodo(event.target.value)
+              }} />
           </form>
           <ol className={styles.ol}>
-            <li className={styles.todo__lis}>
-              <input className={styles.li__input} type="checkbox" id="todo-1" />
-              <label htmlFor="todo-1">Invite classmates</label>
+           {state.map(({ label, id, completed }) => (
+            <li key={id} className={styles.todo__lis}>
+              <input 
+                type="checkbox"
+                id={id}
+                className={styles.li__input}
+                checked={completed}
+                onChange={() => 
+                  dispatch({
+                    type: 'TOGGLE_TODO',
+                    id,
+                  })
+                }
+              />
+              <label htmlFor={id}>{label}</label>
             </li>
-            <li className={styles.todo__lis}>
-              <input className={styles.li__input} type="checkbox" id="todo-2" />
-              <label htmlFor="todo-2">Hire clown</label>
-            </li>
-            <li className={styles.todo__lis}>
-              <input className={styles.li__input} type="checkbox" id="todo-3" />
-              <label htmlFor="todo-3">Order bouncy castle</label>
-            </li>
+           ))}
           </ol>
         </div>
       </main>

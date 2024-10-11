@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# TODO App  
+Initial:  
+<img src="./src/app/img/todo-initial.png" width="350" alt="The TODO app built in React, initial state" />  
+
+Items:  
+<img src="./src/app/img/todo-app.png" width="350" alt="The TODO app built in React, fully functional" />
+
+
 ## Getting Started
 
 First, run the development server:

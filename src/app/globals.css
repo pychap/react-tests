@@ -48,7 +48,7 @@ a {
 
 .form__todo input {
   margin: 8px;
-  background: white;
+  /* background: white; */
   border-color: #888;
 }
 
