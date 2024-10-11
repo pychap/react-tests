@@ -1,6 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 # TODO App  
+
+*Credit: Josh Comeau*  
+
 Initial:  
 <img src="./src/app/img/todo-initial.png" width="350" alt="The TODO app built in React, initial state" />  
 
