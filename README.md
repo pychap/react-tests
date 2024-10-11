@@ -5,10 +5,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 *Credit: Josh Comeau*  
 
 Initial:  
-<img src="./src/app/img/todo-initial.png" width="350" alt="The TODO app built in React, initial state" />  
+<img src="./src/app/img/todo-initial.png" width="300" alt="The TODO app built in React, initial state" />  
 
 Items:  
-<img src="./src/app/img/todo-app.png" width="350" alt="The TODO app built in React, fully functional" />
+<img src="./src/app/img/todo-app.png" width="300" alt="The TODO app built in React, fully functional" />
 
 
 ## Getting Started
